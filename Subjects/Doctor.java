@@ -16,17 +16,22 @@ public class Doctor extends Person {
         this.specialty = specialty;
         this.yearsOfExperience = yearsOfExperience;
     }
-    //setters
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println(getName() + " has " + yearsOfExperience + " years of experience in " + specialty);
+    }
+    //setters and getters
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
     public void setSpecialty(String specialty) {
         this.specialty = specialty;
     }
     public void setYearsOfExperience(int yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
-    //setters and getters for name and age already in person class
-    public int getYearsOfExperience() {
-        return yearsOfExperience;
-    }
+
     public String getSpecialty() {
         return specialty;
     }
@@ -38,12 +43,12 @@ public class Doctor extends Person {
         if (!other.specialty.equals(specialty)) {
             return false;
         }
-
         return true;
     }
     @Override
     public String toString() {
-        return super.getName() + " has " + yearsOfExperience + " years of experience in " + specialty;
+//        return getName() + " has " + yearsOfExperience + " years of experience" +" in " + specialty;
+        return getName();
     }
 
 

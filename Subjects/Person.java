@@ -11,6 +11,7 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
     //setters
     public void setName(String name) {
         this.name = name;
@@ -27,7 +28,13 @@ public class Person {
     public int getAge() {
         return age;
     }
+    public void printDetails() {
+        System.out.println( "Name: " + name + ", Age: " + age);
+    }
 
+    void addPerson() {
+        System.out.println("person added");
+    }
 
 }
 
