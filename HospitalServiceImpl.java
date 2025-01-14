@@ -6,24 +6,20 @@ import java.util.Collections;
 import java.util.List;
 //dynamically adding doctors and patients to arrays
 public class HospitalServiceImpl implements HospitalService {
-    private final List<Doctor> doctors = new ArrayList<>();
-    private final List<Patient> patients = new ArrayList<>();
+    private  List<Doctor> doctors = new ArrayList<>();
+    private  List<Patient> patients = new ArrayList<>();
     public void addDoctor(Doctor doctor) {
         doctors.add(doctor);
     }
     public void addPatient(Patient patient) {
         patients.add(patient);
     }
-    /* Default constructor
+    // Default constructor
     public HospitalServiceImpl() {
         this.doctors = new ArrayList<>();
+        this.patients = new ArrayList<>();
     }
 
-
-    public HospitalServiceImpl(List<Doctor> doctors) {
-        this.doctors = doctors;
-    }
-    */
     @Override
     public List<String> adultsFilter() {
         List<String> filteredPatients = new ArrayList<>();
